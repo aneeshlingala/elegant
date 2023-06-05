@@ -34,6 +34,11 @@ if [ "$1" == "--help" ]; then
 fi
 
 if [ "$1" == "--install" ]; then
+     if grep "$2" == ""
+    then
+        echo "Error: No package specified."
+
+fi
     if grep "$2" /usr/share/elegant/installed > /dev/null
     then
         echo "Error: Package already installed... use --reinstall to reinstall."
@@ -41,6 +46,7 @@ if [ "$1" == "--install" ]; then
     else
         echo "Package not installed, continuing..."
 fi
+
     echo "Installing $2..."
     curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginstall" | bash
     echo "$2" | sudo tee -a /usr/share/elegant/installed
