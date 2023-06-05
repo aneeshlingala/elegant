@@ -67,5 +67,7 @@ fi
         echo "Error: $2 is not installed."
 fi
 
+fi
+
     
     
