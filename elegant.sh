@@ -1,6 +1,11 @@
+#!/usr/bin/env bash
 echo "Starting Elegant..."
+echo ""
+echo "Made by Aneesh Lingala (aneeshlingala.github.io)"
+echo "Elegant is fully open-source!"
+echo ""
 echo "Defining variables..."
-
+echo ""
 echo "Running preliminary check..."
 
 if [ -d "/usr/share/elegant" ]
@@ -37,6 +42,6 @@ if [ "$1" == "--install" ]; then
         echo "Package not installed, continuing..."
 fi
     echo "Installing $2..."
-    curl https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginstall | bash
-    echo $2 /usr/share/elegant/installed
+    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginstall" | bash
+    echo "$2" | sudo tee -a /usr/share/elegant/installed
 fi
