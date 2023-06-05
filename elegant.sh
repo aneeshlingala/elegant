@@ -58,16 +58,15 @@ if [ "$1" == "--remove" ]; then
         echo "Error: No package specified."
         exit
 fi
-
-     if grep "$2" /usr/share/elegant/installed > /dev/null
+    if grep "$2" /usr/share/elegant/installed > /dev/null
     then
-        echo "$2 is installed... removing."
+        echo "$2 is installed... continuing."
 
     else
         echo "Error: $2 is not installed."
 fi
 
+    echo "Removing $2..."
+    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkgremove" | bash
+    cat /usr/share/elegant/installed | sed "/$2/d"
 fi
-
-    
-    
