@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 echo "Starting Elegant..."
 echo ""
 echo "Made by Aneesh Lingala (aneeshlingala.github.io)"
