@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$EUID" -eq 0 ]; then
+    echo "Error: Do not run elegant as root."
+    exit
+fi
+
 echo "Starting Elegant..."
 echo ""
 echo "Made by Aneesh Lingala (aneeshlingala.github.io)"
