@@ -111,3 +111,5 @@ if [ "$1" == "--info" ]; then
     echo "New releases since upload: $pkgrel"
     echo "Source: $source"
 fi
+
+fi
