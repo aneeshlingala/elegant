@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$EUID" -eq 0 ]; then
-    echo "Error: Do not run elegant as root."
+    echo "Error: do not run elegant as root."
     exit
 fi
 
@@ -99,3 +99,15 @@ fi
     curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginstall" | bash
     
     fi
+
+if [ "$1" == "--info" ]; then 
+    if grep "$2" == ""
+    then
+        echo "Error: no package specified."
+        exit
+       
+    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" | source
+    echo "Package Name: $name"
+    echo "New releases since upload: $pkgrel"
+    echo "Source: $source"
+fi
