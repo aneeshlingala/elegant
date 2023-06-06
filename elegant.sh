@@ -92,5 +92,5 @@ fi
     echo "Reinstalling $2..."
     curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkgremove" | bash
     curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginstall" | bash
-
     
+    fi
