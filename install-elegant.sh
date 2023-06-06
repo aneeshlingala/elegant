@@ -7,6 +7,7 @@ fi
 
 echo "Installing Elegant..."
 mkdir /usr/share/elegant
+touch /usr/share/elegant/installed
 cd /usr/bin
 wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
 mv elegant.sh elegant
