@@ -122,7 +122,10 @@ if [ "$1" == "--info" ]; then
         echo "Error: no package specified."
         exit
        
-    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" | source
+    cd ~/.local/share/elegant
+    wget "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkgremove"
+    source pkgremove
+    rm -rf pkgremove
     echo "Package Name: $name"
     echo "New releases since upload: $pkgrel"
     echo "Source: $source"
