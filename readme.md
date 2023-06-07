@@ -13,6 +13,7 @@ To install with the script, you have to run:
 
 ## Sources
 The Elegant package repository is located at: https://github.com/aneeshlingala/elegant-pkgs
+
 The source code of Elegant Package Manager is located at: https://github.com/aneeshlingala/elegant
 
 
