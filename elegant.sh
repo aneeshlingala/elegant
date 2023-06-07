@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version=0.9
+version=0.9.1
 newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version | cat)
 
 
@@ -17,8 +17,7 @@ else
     exit
 fi
 
-  if [ $newver -gt $version ]
-then
+  if [ $newver -gt $version ]; then
     echo "Installing an update..."
     sudo rm -rf /usr/bin/elegant
     cd /usr/bin
