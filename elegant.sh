@@ -22,14 +22,6 @@ else
     exit
 fi
 
-if [ -d "~/.local/share/elegant" ]
-then
-    echo "~/.local/share/elegant exists... continuing."
-else
-    echo "Error: ~/.local/share/elegant not found. Please reinstall Elegant!"
-    exit
-fi
-
 if [ "$1" == "" ]; then 
     echo ""
     echo "Error: No option specified. View available options by running elegant --help."
