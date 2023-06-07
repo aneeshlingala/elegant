@@ -13,6 +13,8 @@ else
     exit
 fi
 
+version=0.8.1
+
 if [ "$1" == "" ]; then 
     echo ""
     echo "Error: No option specified. View available options by running elegant --help."
