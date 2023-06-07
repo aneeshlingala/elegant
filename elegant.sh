@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version=0.92
+version=1
 newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version)
 
 
