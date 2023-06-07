@@ -5,15 +5,6 @@ if [ "$EUID" -eq 0 ]; then
     exit
 fi
 
-echo "Starting Elegant..."
-echo ""
-echo "Made by Aneesh Lingala (aneeshlingala.github.io)"
-echo "Elegant is fully open-source! View the source at: https://github.com/aneeshlingala/elegant"
-echo ""
-echo "Defining variables..."
-echo ""
-echo "Running preliminary check..."
-
 if [ -d "/usr/share/elegant" ]
 then
     echo "/usr/share/elegant exists... continuing."
