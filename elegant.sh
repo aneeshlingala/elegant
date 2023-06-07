@@ -102,7 +102,7 @@ if [ "$1" == "--info" ]; then
         echo "Error: no package specified."
 fi
     cd ~
-    wget –quiet "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo"
+    wget "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" >/dev/null 2>&1 
     cat pkginfo
     rm -rf pkginfo
 fi
