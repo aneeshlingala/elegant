@@ -21,9 +21,9 @@ fi
     echo "Installing an update..."
     sudo rm -rf /usr/bin/elegant
     cd /usr/bin
-    wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
-    mv elegant.sh elegant
-    chmod +x elegant
+    sudo wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
+    sudo mv elegant.sh elegant
+    sudo chmod +x elegant
     cd ~
     exit
 fi
