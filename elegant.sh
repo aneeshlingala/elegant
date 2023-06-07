@@ -113,6 +113,7 @@ if [ "$1" == "--info" ]; then
     echo "Package Name: $name"
     echo "New releases since upload: $pkgrel"
     echo "Source: $source"
+    cd ~
 fi
 
 fi
