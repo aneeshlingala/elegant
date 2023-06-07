@@ -41,7 +41,7 @@ if [ "$1" == "--help" ]; then
 fi
 
 if [ "$1" == "--install" ]; then
-     if grep "$2" == ""
+     if [ -z "$2" ]; then
     then
         echo "Error: No package specified."
         exit
@@ -60,7 +60,7 @@ fi
 fi
 
 if [ "$1" == "--remove" ]; then
-     if grep "$2" == ""
+     if [ -z "$2" ]; then
     then
         echo "Error: No package specified."
         exit
@@ -80,7 +80,7 @@ fi
 fi
 
 if [ "$1" == "--reinstall" ]; then
-     if grep "$2" == ""
+     if [ -z "$2" ]; then
     then
         echo "Error: no package specified."
         exit
@@ -101,7 +101,7 @@ fi
     fi
 
 if [ "$1" == "--info" ]; then 
-    if grep "$2" == ""
+    if [ -z "$2" ]; then
     then
         echo "Error: no package specified."
         exit
