@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version=0.9.1
+version=0.92
 newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version | cat)
 
 
