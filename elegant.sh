@@ -13,7 +13,7 @@ else
     exit
 fi
 
-version=0.8.1
+version=0.8
 
 if [ "$1" == "" ]; then 
     echo ""
