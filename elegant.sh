@@ -17,8 +17,8 @@ else
     exit
 fi
 
-while :; do
-  if (( $(newver) >= $version )); then
+  if [ $newver -gt $version ]
+then
     echo "Installing an update..."
     sudo rm -rf /usr/bin/elegant
     cd /usr/bin
@@ -27,7 +27,7 @@ while :; do
     chmod +x elegant
     cd ~
     exit
-  fi
+fi
 
 if [ "$1" == "" ]; then 
     echo ""
