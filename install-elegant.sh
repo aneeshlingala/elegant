@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-if (( $EUID != 0 )); then
-    echo "Error: Please run the installer as root."
-    exit
-fi
-
 echo "Installing Elegant..."
-mkdir /usr/share/elegant
-touch /usr/share/elegant/installed
+sudo mkdir /usr/share/elegant
+sudo touch /usr/share/elegant/installed
+mkdir ~/.local/share/elegant
 cd /usr/bin
-wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
-mv elegant.sh elegant
-chmod +x elegant
+sudo wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
+sudo mv elegant.sh elegant
+sudo chmod +x elegant
 echo "Finished installing Elegant!"
 exit
