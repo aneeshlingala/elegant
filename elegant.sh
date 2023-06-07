@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+version=0.8
+
 if [ "$EUID" -eq 0 ]; then
     echo "Error: do not run elegant as root."
     exit
@@ -13,7 +15,12 @@ else
     exit
 fi
 
-version=0.8
+newver=
+
+while :; do
+  if (( $(newver) >=  )); then
+    xdotool mousemove_relative 1 1
+  fi
 
 if [ "$1" == "" ]; then 
     echo ""
