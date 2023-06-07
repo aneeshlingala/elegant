@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 version=0.8
+newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version | cat)
+
 
 if [ "$EUID" -eq 0 ]; then
     echo "Error: do not run elegant as root."
@@ -15,11 +17,16 @@ else
     exit
 fi
 
-newver=
-
 while :; do
-  if (( $(newver) >=  )); then
-    xdotool mousemove_relative 1 1
+  if (( $(newver) >= $version )); then
+    echo "Installing an update..."
+    sudo rm -rf /usr/bin/elegant
+    cd /usr/bin
+    wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
+    mv elegant.sh elegant
+    chmod +x elegant
+    cd ~
+    exit
   fi
 
 if [ "$1" == "" ]; then 
