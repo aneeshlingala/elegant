@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 version=0.92
-newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version | cat)
+newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version)
 
 
 if [ "$EUID" -eq 0 ]; then
