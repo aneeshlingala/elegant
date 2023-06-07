@@ -107,13 +107,7 @@ if [ "$1" == "--info" ]; then
         exit
        
     cd ~/.local/share/elegant
-    wget "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo"
-    source pkginfo
-    rm -rf pkginfo
-    echo "Package Name: $name"
-    echo "New releases since upload: $pkgrel"
-    echo "Source: $source"
-    cd ~
+    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" | cat
 fi
 
 fi
