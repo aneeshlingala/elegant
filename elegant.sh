@@ -101,8 +101,7 @@ if [ "$1" == "--info" ]; then
     if [ -z "$2" ]; then
         echo "Error: no package specified."
         exit
-       
-    cd ~/.local/share/elegant
+      
     curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" | cat
 fi
 
