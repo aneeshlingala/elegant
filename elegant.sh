@@ -101,5 +101,5 @@ if [ "$1" == "--info" ]; then
     if [ -z "$2" ]; then
         echo "Error: no package specified."
 fi
-    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" > /dev/null 2>&1 | cat
+    curl "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" | cat
 fi
