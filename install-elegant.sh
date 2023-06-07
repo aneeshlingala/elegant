@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ "$EUID" -eq 0 ]; then
+    echo "Error: do not run Elegant Installer as root."
+    exit
+fi
+
 echo "Installing Elegant..."
 sudo mkdir /usr/share/elegant
 sudo touch /usr/share/elegant/installed
