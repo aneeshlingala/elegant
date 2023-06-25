@@ -17,5 +17,5 @@ The Elegant package repository is located at: https://github.com/aneeshlingala/e
 The source code of Elegant Package Manager is located at: https://github.com/aneeshlingala/elegant
 
 
-
+> Note: This project on hold. I will resume development sometime in July.
 
