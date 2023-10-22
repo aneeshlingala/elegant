@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-version=1
+version=4
+newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version > /dev/null)
+
 
 if [ "$EUID" -eq 0 ]; then
     echo "Error: do not run elegant as root."
@@ -12,6 +14,17 @@ then
     echo "/usr/share/elegant exists... continuing."
 else
     echo "Error: /usr/share/elegant not found. Please reinstall Elegant!"
+    exit
+fi
+
+  if [ $newver -gt $version ]; then
+    echo "Installing an update..."
+    sudo rm -rf /usr/bin/elegant
+    cd /usr/bin
+    sudo wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
+    sudo mv elegant.sh elegant
+    sudo chmod +x elegant
+    cd ~
     exit
 fi
 
@@ -44,19 +57,6 @@ fi
         exit
     else
         echo "Package $2 not installed, continuing..."
-fi
-
-if [ "$1" == "--update" ]; then
-    newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version)
-    if [ $newver -gt $version ]; then
-    echo "Updating Elegant..."
-    sudo rm -rf /usr/bin/elegant
-    cd /usr/bin
-    sudo wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
-    sudo mv elegant.sh elegant
-    sudo chmod +x elegant
-    cd ~
-    exit 
 fi
 
     echo "Installing $2..."
@@ -106,7 +106,7 @@ fi
 if [ "$1" == "--info" ]; then 
     if [ -z "$2" ]; then
         echo "Error: no package specified."
-    fi
+fi
     cd ~
     wget "https://raw.githubusercontent.com/aneeshlingala/elegant-pkgs/main/$2/pkginfo" >/dev/null 2>&1 
     cat pkginfo
