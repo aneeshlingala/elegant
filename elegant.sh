@@ -49,7 +49,7 @@ fi
 if [ "$1" == "--update" ]; then
     newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version)
     if [ $newver -gt $version ]; then
-    echo "Installing an update..."
+    echo "Updating Elegant..."
     sudo rm -rf /usr/bin/elegant
     cd /usr/bin
     sudo wget https://raw.githubusercontent.com/aneeshlingala/elegant/main/elegant.sh
