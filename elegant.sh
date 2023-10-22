@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-version=4
-newver=$(curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/version > /dev/null)
-
+version=5
+newver=$(curl -s https://raw.githubusercontent.com/aneeshlingala/elegant/main/version)
 
 if [ "$EUID" -eq 0 ]; then
     echo "Error: do not run elegant as root."
