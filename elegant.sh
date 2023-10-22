@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-version=5
+version=4
 newver=$(curl -s https://raw.githubusercontent.com/aneeshlingala/elegant/main/version)
 
 if [ "$EUID" -eq 0 ]; then
