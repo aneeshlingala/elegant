@@ -7,7 +7,7 @@ Elegant Package Manager is a package manager written in bash, only focusing on e
 Elegant package manager requires curl, wget, bash, sudo, and binutils to be installed.
 > The install script must be run as root.
 
-To install with the script, you have to run:
+To install Elegant with the script, you have to run:
 
 ``` curl https://raw.githubusercontent.com/aneeshlingala/elegant/main/install-elegant.sh | sudo bash ```
 
